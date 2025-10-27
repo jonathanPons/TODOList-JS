@@ -12,16 +12,20 @@
   </head>
   <body>
     <div class="Container">
-      <label for="Tache"> Saisi une tâche </label>
-      <input
-        required
-        type="text"
-        id="Tache"
-        name="Tache"
-        aria-label="Ajouter une tâche "
-      />
-      <button type="submit">Ajouter</button>
-      <ul class="todo-list"></ul>
+      <label for="Tache">
+        Saisi une tâche
+        <input
+          required
+          type="text"
+          id="Tache"
+          name="Tache"
+          aria-label="Ajouter une tâche "
+        />
+      </label>
+
+      <button type="submit" id="monBouton">Ajouter</button>
+      <ul class="todo-list" id="maListe"></ul>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
