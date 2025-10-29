@@ -18,19 +18,27 @@ li {
   background-color: #f1f1f1;
   margin: 5px;
 }
+label {
+  font-size: 15px;
+}
 input {
   padding: 3px;
+  border-radius: 10px;
 }
 input:focus {
-  border: 3px solid blue;
+  border: 1px solid blue;
 }
 button:focus {
-  border: 3px solid blue;
+  border: 2px solid blue;
 }
 
 button {
   padding: 5px;
   border-radius: 10px;
+}
+button:hover {
+  background-color: aliceblue;
+  cursor: pointer;
 }
 /******** Container *********/
 
@@ -39,7 +47,7 @@ button {
   justify-content: center;
   align-items: start;
   width: 400px;
-  padding: 3em 1em 3em 1em;
+  padding: 5em 1em 5em 1em;
   border-radius: 10px;
 
   background-color: #f1f1f1;
@@ -47,7 +55,18 @@ button {
   gap: 0.8em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
+/****** Maboite Ul *******/
+.todo-list {
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 60px;
+}
+.todo-list li button {
+  margin: 10px;
+}
 /************ Responsive *********/
 
 @media (width < 600px) {
