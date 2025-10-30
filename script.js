@@ -6,7 +6,7 @@ const monBouton = document.querySelector("#monBouton");
 const listeTache = document.querySelector("#maListe");
 
 // Creer le clic //
-
+let Tasks = [];
 monBouton.addEventListener("click", () => {
   // Recuperer la donné de l'utilisateur dans l'input au clic sur le button//
   const Task = maTache.value.trim();
@@ -15,10 +15,12 @@ monBouton.addEventListener("click", () => {
     alert("Veuillez rentrer un tâche");
   } else {
     // Creer un nouvelle li //
+
     const NouvelleTask = document.createElement("li");
 
     // definir le li comme la nouvelle tache //
     NouvelleTask.textContent = Task;
+    Tasks.push(Task);
     // la placer la liste ul//
     listeTache.appendChild(NouvelleTask);
     console.log(listeTache.appendChild(NouvelleTask));
@@ -26,12 +28,13 @@ monBouton.addEventListener("click", () => {
 
     const AddDelete = document.createElement("button");
 
-    AddDelete.textContent = "Suppimer";
+    AddDelete.textContent = "Supprimer";
     console.log(AddDelete);
     NouvelleTask.appendChild(AddDelete);
 
     AddDelete.addEventListener("click", () => {
-      NouvelleTask.remove(Task);
+      NouvelleTask.remove();
+      console.log(Task);
     });
 
     //Vider l'input

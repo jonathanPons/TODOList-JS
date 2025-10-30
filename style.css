@@ -13,6 +13,11 @@ body {
   align-items: center;
   height: 100vh;
 }
+h2 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+}
 li {
   list-style: none;
   background-color: #f1f1f1;
@@ -47,25 +52,46 @@ button:hover {
   justify-content: center;
   align-items: start;
   width: 400px;
+  max-width: 100%;
   padding: 5em 1em 5em 1em;
   border-radius: 10px;
-
   background-color: #f1f1f1;
-  height: 300px;
+  overflow: hidden;
+  height: auto;
   gap: 0.8em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 /****** Maboite Ul *******/
-.todo-list {
-  border: 1px solid yellow;
+ul {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   justify-content: center;
-  margin-top: 20px;
-  margin-left: 60px;
+  margin-top: 15px;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
-.todo-list li button {
-  margin: 10px;
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  margin: 5px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+li > button {
+  background-color: #dc2626;
+  flex-shrink: 0;
+}
+li > button:hover {
+  cursor: pointer;
+  color: #f1f1f1;
+  background-color: #b91c1c;
 }
 /************ Responsive *********/
 
