@@ -27,7 +27,7 @@ label {
   font-size: 15px;
 }
 input {
-  padding: 3px;
+  padding: 5px;
   border-radius: 10px;
 }
 input:focus {
@@ -70,6 +70,8 @@ ul {
   justify-content: center;
   margin-top: 15px;
   overflow-wrap: break-word;
+
+  gap: 5px;
   max-width: 100%;
 }
 li {
@@ -79,6 +81,7 @@ li {
   background-color: #f1f1f1;
   margin: 5px;
   max-width: 100%;
+
   overflow-wrap: break-word;
   word-break: break-all;
   overflow: hidden;

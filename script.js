@@ -7,37 +7,31 @@ const listeTache = document.querySelector("#maListe");
 
 // Creer le clic //
 let Tasks = [];
-monBouton.addEventListener("click", () => {
-  // Recuperer la donné de l'utilisateur dans l'input au clic sur le button//
-  const Task = maTache.value.trim();
-  // S'assurer que le texte n'est pas vide //
-  if (Task === "") {
+
+function ajouterTache() {
+  const texte = maTache.value.trim();
+  if (texte === "") {
     alert("Veuillez rentrer un tâche");
   } else {
-    // Creer un nouvelle li //
-
+    Tasks.push(texte);
     const NouvelleTask = document.createElement("li");
-
-    // definir le li comme la nouvelle tache //
-    NouvelleTask.textContent = Task;
-    Tasks.push(Task);
-    // la placer la liste ul//
+    NouvelleTask.textContent = texte;
     listeTache.appendChild(NouvelleTask);
-    console.log(listeTache.appendChild(NouvelleTask));
-    // AJouter la touche supprimer avec chaque task//
 
     const AddDelete = document.createElement("button");
 
     AddDelete.textContent = "Supprimer";
-    console.log(AddDelete);
-    NouvelleTask.appendChild(AddDelete);
 
+    NouvelleTask.appendChild(AddDelete);
     AddDelete.addEventListener("click", () => {
       NouvelleTask.remove();
-      console.log(Task);
     });
-
-    //Vider l'input
     maTache.value = "";
+  }
+}
+monBouton.addEventListener("click", ajouterTache);
+maTache.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    ajouterTache(maTache.value);
   }
 });
